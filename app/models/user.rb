@@ -3,6 +3,7 @@ require 'digest/sha1'
 class User < ActiveRecord::Base
   
   has_many :bookings
+  has_many :booking_notes
   
   include Authentication
   include Authentication::ByPassword

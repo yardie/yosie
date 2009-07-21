@@ -9,13 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090721155330) do
+ActiveRecord::Schema.define(:version => 20090721193613) do
 
   create_table "booking_notes", :force => true do |t|
     t.integer  "booking_id"
     t.text     "note"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "author_id"
   end
 
   create_table "bookings", :force => true do |t|
@@ -24,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20090721155330) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.integer  "author_id"
   end
 
   create_table "users", :force => true do |t|

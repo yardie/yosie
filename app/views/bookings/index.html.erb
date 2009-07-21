@@ -11,11 +11,24 @@
   <tr>
     <td><%=h booking.ArrivalDate %></td>
     <td><%=h booking.DepartureDate %></td>
-    <td><%= booking.booking_notes.count() -%></td>
     <td><%= link_to 'Show', booking %></td>
     <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
     <td><%= link_to 'Destroy', booking, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
+  <% if booking.booking_notes.count() > 0 -%></td>
+  <tr>
+    <td>Notes:</td>
+    <td colspan="4">
+    <% booking.booking_notes.each do |note| -%>
+      <p>
+        <%=h note.note %>
+      </p>
+    <% end %>
+    </td>
+  <tr>
+    <td></td>
+  </tr>
+  <% end %>
 <% end %>
 </table>
 
