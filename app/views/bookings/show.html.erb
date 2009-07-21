@@ -11,7 +11,7 @@
 Created by <%=h @booking.author.firstname %> @ <%=h @booking.created_at %>
 <% if @booking.updated_at != @booking.created_at %>
 <br/>
-Last modified by <%=h @booking.latestEditor.firstname %> @ <%=h @booking.updated_at %>
+Last modified by <%=h @booking.latest_editor.firstname %> @ <%=h @booking.updated_at %>
 <% end %>
 
 <p>

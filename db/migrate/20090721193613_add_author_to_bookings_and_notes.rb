@@ -5,7 +5,7 @@ class AddAuthorToBookingsAndNotes < ActiveRecord::Migration
   end
 
   def self.down
-    remove_column :bookings_id, :author
-    remove_column :booking_notes_id, :author
+    remove_column :bookings, :author_id
+    remove_column :booking_notes, :author_id
   end
 end

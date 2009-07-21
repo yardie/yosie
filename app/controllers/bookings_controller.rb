@@ -43,7 +43,9 @@ class BookingsController < ApplicationController
   # POST /bookings.xml
   def create
     @booking = Booking.new(params[:booking])
-    @booking.user_id = current_user.id
+    @booking.user_id = current_user.id # TODO - if administrator is logged in, allow selection or (new) entry of user
+    @booking.author_id = current_user.id
+    @booking.latest_editor_id = current_user.id
 
     respond_to do |format|
       if @booking.save
@@ -61,6 +63,7 @@ class BookingsController < ApplicationController
   # PUT /bookings/1.xml
   def update
     @booking = Booking.find(params[:id])
+    @booking.latest_editor_id = current_user.id
 
     respond_to do |format|
       if @booking.update_attributes(params[:booking])
