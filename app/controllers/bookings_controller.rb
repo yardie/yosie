@@ -2,7 +2,8 @@ class BookingsController < ApplicationController
   # GET /bookings
   # GET /bookings.xml
   def index
-    @bookings = Booking.all
+    @user = User.find(current_user)
+    @bookings = @user.bookings.find(:all)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -41,6 +42,7 @@ class BookingsController < ApplicationController
   # POST /bookings.xml
   def create
     @booking = Booking.new(params[:booking])
+    @booking.user_id = current_user.id
 
     respond_to do |format|
       if @booking.save
