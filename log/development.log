@@ -597,3 +597,649 @@ Processing BookingsController#index (for 127.0.0.1 at 2009-07-21 16:11:38) [GET]
 Rendering template within layouts/bookings
 Rendering bookings/index
 Completed in 142ms (View: 25, DB: 6) | 200 OK [http://localhost/]
+
+
+Processing BookingsController#show (for 127.0.0.1 at 2009-07-21 16:29:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBooking Load (1.1ms)[0m   [0;1mSELECT * FROM "bookings" WHERE ("bookings"."id" = 1) [0m
+Rendering template within layouts/bookings
+Rendering bookings/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #13 of app/views/bookings/show.html.erb:
+10: 
+11: <p>
+12:   <b>Notes:</b>
+13: <% for note in @bookings -%>
+14:   <p>
+15:     <%=h booking.note %>
+16:   </p>
+
+    app/views/bookings/show.html.erb:13
+    app/controllers/bookings_controller.rb:19:in `show'
+
+Rendered rescues/_trace (570.1ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (3.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBookings (20090721123754)
+Migrating to CreateUsers (20090721124700)
+Migrating to ChangeNameStructureInUsers (20090721144045)
+Migrating to AddUserIdToBookings (20090721150515)
+Migrating to CreateBookingNotes (20090721151909)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (3.8ms)[0m   [0mCREATE TABLE "booking_notes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "booking_id" integer, "note" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090721151909')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mPRAGMA index_list("booking_notes")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mPRAGMA index_list("bookings")[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mPRAGMA index_info('index_users_on_login')[0m
+
+
+Processing BookingsController#show (for 127.0.0.1 at 2009-07-21 16:32:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBooking Load (1.8ms)[0m   [0mSELECT * FROM "bookings" WHERE ("bookings"."id" = 1) [0m
+Rendering template within layouts/bookings
+Rendering bookings/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #13 of app/views/bookings/show.html.erb:
+10: 
+11: <p>
+12:   <b>Notes:</b>
+13: <% for note in @bookings -%>
+14:   <p>
+15:     <%=h booking.note %>
+16:   </p>
+
+    app/views/bookings/show.html.erb:13
+    app/controllers/bookings_controller.rb:19:in `show'
+
+Rendered rescues/_trace (316.2ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#show (for 127.0.0.1 at 2009-07-21 16:32:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBooking Load (1.2ms)[0m   [0;1mSELECT * FROM "bookings" WHERE ("bookings"."id" = 1) [0m
+Rendering template within layouts/bookings
+Rendering bookings/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #13 of app/views/bookings/show.html.erb:
+10: 
+11: <p>
+12:   <b>Notes:</b>
+13: <% for booking in @bookings -%>
+14:   <p>
+15:     <%=h booking.note %>
+16:   </p>
+
+    app/views/bookings/show.html.erb:13
+    app/controllers/bookings_controller.rb:19:in `show'
+
+Rendered rescues/_trace (131.6ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#show (for 127.0.0.1 at 2009-07-21 16:33:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBooking Load (1.2ms)[0m   [0mSELECT * FROM "bookings" WHERE ("bookings"."id" = 1) [0m
+Rendering template within layouts/bookings
+Rendering bookings/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #13 of app/views/bookings/show.html.erb:
+10: 
+11: <p>
+12:   <b>Notes:</b>
+13: <% for booking in @bookings -%>
+14:   <p>
+15:     <%=h booking.booking_note %>
+16:   </p>
+
+    app/views/bookings/show.html.erb:13
+    app/controllers/bookings_controller.rb:19:in `show'
+
+Rendered rescues/_trace (131.4ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#show (for 127.0.0.1 at 2009-07-21 16:33:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBooking Load (1.2ms)[0m   [0;1mSELECT * FROM "bookings" WHERE ("bookings"."id" = 1) [0m
+Rendering template within layouts/bookings
+Rendering bookings/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #13 of app/views/bookings/show.html.erb:
+10: 
+11: <p>
+12:   <b>Notes:</b>
+13: <% for booking in @bookings -%>
+14:   <p>
+15:     <%=h booking %>
+16:   </p>
+
+    app/views/bookings/show.html.erb:13
+    app/controllers/bookings_controller.rb:19:in `show'
+
+Rendered rescues/_trace (131.9ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#show (for 127.0.0.1 at 2009-07-21 16:33:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBooking Load (2.8ms)[0m   [0mSELECT * FROM "bookings" WHERE ("bookings"."id" = 1) [0m
+Rendering template within layouts/bookings
+Rendering bookings/show
+
+ActionView::TemplateError (undefined method `each' for #<Booking:0x32220c4>) on line #13 of app/views/bookings/show.html.erb:
+10: 
+11: <p>
+12:   <b>Notes:</b>
+13: <% for booking in @booking -%>
+14:   <p>
+15:     <%=h booking %>
+16:   </p>
+
+    app/views/bookings/show.html.erb:13
+    app/controllers/bookings_controller.rb:19:in `show'
+
+Rendered rescues/_trace (142.9ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#show (for 127.0.0.1 at 2009-07-21 16:33:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBooking Load (1.7ms)[0m   [0;1mSELECT * FROM "bookings" WHERE ("bookings"."id" = 1) [0m
+Rendering template within layouts/bookings
+Rendering bookings/show
+
+ActionView::TemplateError (undefined method `each' for #<Booking:0x323e814>) on line #13 of app/views/bookings/show.html.erb:
+10: 
+11: <p>
+12:   <b>Notes:</b>
+13: <% for booking in @booking -%>
+14:   <p>
+15:     <%=h booking.booking_note %>
+16:   </p>
+
+    app/views/bookings/show.html.erb:13
+    app/controllers/bookings_controller.rb:19:in `show'
+
+Rendered rescues/_trace (134.2ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#show (for 127.0.0.1 at 2009-07-21 16:34:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBooking Load (1.2ms)[0m   [0mSELECT * FROM "bookings" WHERE ("bookings"."id" = 1) [0m
+Rendering template within layouts/bookings
+Rendering bookings/show
+
+ActionView::TemplateError (undefined method `each' for #<Booking:0x327a5d0>) on line #13 of app/views/bookings/show.html.erb:
+10: 
+11: <p>
+12:   <b>Notes:</b>
+13: <% for booking in @booking -%>
+14:   <p>
+15:     <%=h booking.booking_notes %>
+16:   </p>
+
+    app/views/bookings/show.html.erb:13
+    app/controllers/bookings_controller.rb:19:in `show'
+
+Rendered rescues/_trace (333.6ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#show (for 127.0.0.1 at 2009-07-21 16:34:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBooking Load (1.2ms)[0m   [0;1mSELECT * FROM "bookings" WHERE ("bookings"."id" = 1) [0m
+Rendering template within layouts/bookings
+Rendering bookings/show
+
+ActionView::TemplateError (undefined method `each' for #<Booking:0x32eb30c>) on line #13 of app/views/bookings/show.html.erb:
+10: 
+11: <p>
+12:   <b>Notes:</b>
+13: <% for booking in @booking -%>
+14:   <p>
+15:     <%=h booking.note %>
+16:   </p>
+
+    app/views/bookings/show.html.erb:13
+    app/controllers/bookings_controller.rb:19:in `show'
+
+Rendered rescues/_trace (352.1ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#show (for 127.0.0.1 at 2009-07-21 16:34:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBooking Load (1.1ms)[0m   [0mSELECT * FROM "bookings" WHERE ("bookings"."id" = 1) [0m
+Rendering template within layouts/bookings
+Rendering bookings/show
+
+ActionView::TemplateError (undefined method `each' for #<Booking:0x3362998>) on line #13 of app/views/bookings/show.html.erb:
+10: 
+11: <p>
+12:   <b>Notes:</b>
+13: <% for booking in @booking -%>
+14:   <p>
+15:     <%=h booking.notes %>
+16:   </p>
+
+    app/views/bookings/show.html.erb:13
+    app/controllers/bookings_controller.rb:19:in `show'
+
+Rendered rescues/_trace (335.2ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#show (for 127.0.0.1 at 2009-07-21 16:35:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBooking Load (1.3ms)[0m   [0;1mSELECT * FROM "bookings" WHERE ("bookings"."id" = 1) [0m
+Rendering template within layouts/bookings
+Rendering bookings/show
+
+ActionView::TemplateError (undefined method `each' for #<Booking:0x33e80e8>) on line #13 of app/views/bookings/show.html.erb:
+10: 
+11: <p>
+12:   <b>Notes:</b>
+13: <% for booking in @booking -%>
+14:   <p>
+15:     <%=h booking.BookingNotes %>
+16:   </p>
+
+    app/views/bookings/show.html.erb:13
+    app/controllers/bookings_controller.rb:19:in `show'
+
+Rendered rescues/_trace (144.4ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#show (for 127.0.0.1 at 2009-07-21 16:37:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBooking Load (1.2ms)[0m   [0mSELECT * FROM "bookings" WHERE ("bookings"."id" = 1) [0m
+
+NoMethodError (undefined method `find' for #<Booking:0x34532e4>):
+  app/controllers/bookings_controller.rb:18:in `show'
+
+Rendered rescues/_trace (102.9ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#show (for 127.0.0.1 at 2009-07-21 16:38:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBooking Load (1.2ms)[0m   [0;1mSELECT * FROM "bookings" WHERE ("bookings"."id" = 1) [0m
+
+NameError (uninitialized constant Booking::BookingNote):
+  app/controllers/bookings_controller.rb:18:in `show'
+
+Rendered rescues/_trace (328.7ms)
+Rendered rescues/_request_and_response (2.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#show (for 127.0.0.1 at 2009-07-21 16:38:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBooking Load (1.5ms)[0m   [0mSELECT * FROM "bookings" WHERE ("bookings"."id" = 1) [0m
+
+NameError (uninitialized constant Booking::BookingNote):
+  app/controllers/bookings_controller.rb:18:in `show'
+
+Rendered rescues/_trace (119.6ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#show (for 127.0.0.1 at 2009-07-21 16:38:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBooking Load (1.1ms)[0m   [0;1mSELECT * FROM "bookings" WHERE ("bookings"."id" = 1) [0m
+
+NameError (uninitialized constant Booking::BookingNote):
+  app/controllers/bookings_controller.rb:18:in `show'
+
+Rendered rescues/_trace (313.7ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (8.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (4.7ms)[0m   [0;1mCREATE TABLE "booking_notes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "booking_id" integer, "note" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (3.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (20.4ms)[0m   [0;1mCREATE TABLE "bookings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ArrivalDate" date, "DepartureDate" date, "created_at" datetime, "updated_at" datetime, "user_id" integer) [0m
+  [4;35;1mSQL (1.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (8.8ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(40), "firstname" varchar(100) DEFAULT '', "email" varchar(100), "crypted_password" varchar(40), "salt" varchar(40), "created_at" datetime, "updated_at" datetime, "remember_token" varchar(40), "remember_token_expires_at" datetime, "activation_code" varchar(40), "activated_at" datetime, "state" varchar(255) DEFAULT 'passive', "deleted_at" datetime, "surname" varchar(255)) [0m
+  [4;35;1mSQL (4.0ms)[0m   [0mCREATE UNIQUE INDEX "index_users_on_login" ON "users" ("login")[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (4.7ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;36;1mSQL (36.2ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (1.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (3.8ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090721151909')[0m
+  [4;36;1mSQL (3.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090721123754')[0m
+  [4;35;1mSQL (5.8ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090721124700')[0m
+  [4;36;1mSQL (9.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090721144045')[0m
+  [4;35;1mSQL (6.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090721150515')[0m
+  [4;36;1mSQL (4.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (5.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBookingNotes (20090721151909)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (22.5ms)[0m   [0mDROP TABLE "booking_notes"[0m
+  [4;36;1mSQL (4.7ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20090721151909'[0m
+  [4;35;1mSQL (1.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (20.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mPRAGMA index_list("bookings")[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mPRAGMA index_info('index_users_on_login')[0m
+  [4;36;1mSQL (5.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBookings (20090721123754)
+Migrating to CreateUsers (20090721124700)
+Migrating to ChangeNameStructureInUsers (20090721144045)
+Migrating to AddUserIdToBookings (20090721150515)
+Migrating to CreateBookingNotes (20090721155330)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (18.1ms)[0m   [0mCREATE TABLE "booking_notes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "booking_id" integer, "note" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090721155330')[0m
+  [4;35;1mSQL (5.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (4.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mPRAGMA index_list("booking_notes")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mPRAGMA index_list("bookings")[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mPRAGMA index_info('index_users_on_login')[0m
+
+
+Processing BookingsController#show (for 127.0.0.1 at 2009-07-21 16:55:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBooking Load (1.1ms)[0m   [0mSELECT * FROM "bookings" WHERE ("bookings"."id" = 1) [0m
+  [4;36;1mBookingNote Load (1.7ms)[0m   [0;1mSELECT * FROM "booking_notes" WHERE ("booking_notes".booking_id = 1) [0m
+Rendering template within layouts/bookings
+Rendering bookings/show
+
+ActionView::TemplateError (undefined local variable or method `notes' for #<ActionView::Base:0x33aaff4>) on line #15 of app/views/bookings/show.html.erb:
+12:   <b>Notes:</b>
+13: <% for note in @notes -%>
+14:   <p>
+15:     <%=h notes.note %>
+16:   </p>
+17: <% end %>
+18: </p>
+
+    app/views/bookings/show.html.erb:15
+    app/views/bookings/show.html.erb:13:in `each'
+    app/views/bookings/show.html.erb:13
+    app/controllers/bookings_controller.rb:20:in `show'
+
+Rendered rescues/_trace (344.8ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#show (for 127.0.0.1 at 2009-07-21 16:56:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBooking Load (1.2ms)[0m   [0mSELECT * FROM "bookings" WHERE ("bookings"."id" = 1) [0m
+  [4;36;1mBookingNote Load (1.2ms)[0m   [0;1mSELECT * FROM "booking_notes" WHERE ("booking_notes".booking_id = 1) [0m
+Rendering template within layouts/bookings
+Rendering bookings/show
+  [4;35;1mUser Load (2.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 200ms (View: 128, DB: 4) | 200 OK [http://localhost/bookings/1]
+
+
+Processing BookingsController#show (for 127.0.0.1 at 2009-07-21 16:57:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBooking Load (1.3ms)[0m   [0;1mSELECT * FROM "bookings" WHERE ("bookings"."id" = 1) [0m
+  [4;35;1mBookingNote Load (4.8ms)[0m   [0mSELECT * FROM "booking_notes" WHERE ("booking_notes".booking_id = 1) [0m
+Rendering template within layouts/bookings
+Rendering bookings/show
+  [4;36;1mUser Load (1.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 183ms (View: 105, DB: 8) | 200 OK [http://localhost/bookings/1]
+
+
+Processing BookingsController#index (for 127.0.0.1 at 2009-07-21 16:58:10) [GET]
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mBooking Load (2.0ms)[0m   [0mSELECT * FROM "bookings" WHERE ("bookings".user_id = 1) [0m
+Rendering template within layouts/bookings
+Rendering bookings/index
+Completed in 168ms (View: 35, DB: 6) | 200 OK [http://localhost/bookings]
+
+
+Processing BookingsController#index (for 127.0.0.1 at 2009-07-21 16:59:22) [GET]
+  [4;36;1mUser Load (1.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mBooking Load (1.4ms)[0m   [0;1mSELECT * FROM "bookings" WHERE ("bookings".user_id = 1) [0m
+Rendering template within layouts/bookings
+Rendering bookings/index
+  [4;35;1mSQL (2.8ms)[0m   [0mSELECT count(*) AS count_all FROM "booking_notes" WHERE ("booking_notes".booking_id = 1) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "booking_notes" WHERE ("booking_notes".booking_id = 2) [0m
+Completed in 420ms (View: 105, DB: 9) | 200 OK [http://localhost/bookings]
+
+
+Processing BookingsController#index (for 127.0.0.1 at 2009-07-21 17:02:56) [GET]
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (1.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mBooking Load (1.5ms)[0m   [0mSELECT * FROM "bookings" WHERE ("bookings".user_id = 1) [0m
+Rendering template within layouts/bookings
+Rendering bookings/index
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "booking_notes" WHERE ("booking_notes".booking_id = 1) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "booking_notes" WHERE ("booking_notes".booking_id = 2) [0m
+
+ActionView::TemplateError (undefined local variable or method `noteNumb' for #<ActionView::Base:0x32237f8>) on line #16 of app/views/bookings/index.html.erb:
+13:     <td><%=h booking.DepartureDate %></td>
+14:     <% if noteCount = booking.booking_notes.count() > 1 then %>
+15:     <td><%=h noteCount %> notes</td>
+16:     <% elsif noteNumb > 0 %>
+17:     <td><%=h noteCount %> note</td>
+18:     <% else %>
+19:     <td></td>
+
+    app/views/bookings/index.html.erb:16
+    app/views/bookings/index.html.erb:10:in `each'
+    app/views/bookings/index.html.erb:10
+    app/controllers/bookings_controller.rb:8:in `index'
+
+Rendered rescues/_trace (135.5ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#index (for 127.0.0.1 at 2009-07-21 17:03:24) [GET]
+  [4;36;1mUser Load (1.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (1.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mBooking Load (2.2ms)[0m   [0;1mSELECT * FROM "bookings" WHERE ("bookings".user_id = 1) [0m
+Rendering template within layouts/bookings
+Rendering bookings/index
+  [4;35;1mSQL (2.1ms)[0m   [0mSELECT count(*) AS count_all FROM "booking_notes" WHERE ("booking_notes".booking_id = 1) [0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "booking_notes" WHERE ("booking_notes".booking_id = 2) [0m
+
+ActionView::TemplateError (undefined local variable or method `noteNumb' for #<ActionView::Base:0x32185ec>) on line #16 of app/views/bookings/index.html.erb:
+13:     <td><%=h booking.DepartureDate %></td>
+14:     <% if (noteCount = booking.booking_notes.count()) > 1 then %>
+15:     <td><%=h noteCount %> notes</td>
+16:     <% elsif noteNumb > 0 %>
+17:     <td><%=h noteCount %> note</td>
+18:     <% else %>
+19:     <td></td>
+
+    app/views/bookings/index.html.erb:16
+    app/views/bookings/index.html.erb:10:in `each'
+    app/views/bookings/index.html.erb:10
+    app/controllers/bookings_controller.rb:8:in `index'
+
+Rendered rescues/_trace (165.0ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#index (for 127.0.0.1 at 2009-07-21 17:04:18) [GET]
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mBooking Load (1.4ms)[0m   [0mSELECT * FROM "bookings" WHERE ("bookings".user_id = 1) [0m
+Rendering template within layouts/bookings
+Rendering bookings/index
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "booking_notes" WHERE ("booking_notes".booking_id = 1) [0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSELECT count(*) AS count_all FROM "booking_notes" WHERE ("booking_notes".booking_id = 2) [0m
+
+ActionView::TemplateError (undefined local variable or method `noteNumb' for #<ActionView::Base:0x31dd168>) on line #18 of app/views/bookings/index.html.erb:
+15:       noteCount = booking.booking_notes.count()
+16:      if noteCount > 1 then %>
+17:     <td><%=h noteCount %> notes</td>
+18:     <% elsif noteNumb > 0 %>
+19:     <td><%=h noteCount %> note</td>
+20:     <% else %>
+21:     <td></td>
+
+    app/views/bookings/index.html.erb:18
+    app/views/bookings/index.html.erb:10:in `each'
+    app/views/bookings/index.html.erb:10
+    app/controllers/bookings_controller.rb:8:in `index'
+
+Rendered rescues/_trace (177.3ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#index (for 127.0.0.1 at 2009-07-21 17:05:40) [GET]
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (2.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mBooking Load (1.8ms)[0m   [0;1mSELECT * FROM "bookings" WHERE ("bookings".user_id = 1) [0m
+Rendering template within layouts/bookings
+Rendering bookings/index
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "booking_notes" WHERE ("booking_notes".booking_id = 1) [0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "booking_notes" WHERE ("booking_notes".booking_id = 2) [0m
+
+ActionView::TemplateError (undefined local variable or method `noteNumb' for #<ActionView::Base:0x31696b4>) on line #18 of app/views/bookings/index.html.erb:
+15:       noteCount = booking.booking_notes.count()
+16:       if noteCount > 1 then %>
+17:     <td><%=h noteCount %> notes</td>
+18:     <% elsif noteNumb > 0 %>
+19:     <td><%=h noteCount %> note</td>
+20:     <% else %>
+21:     <td></td>
+
+    app/views/bookings/index.html.erb:18
+    app/views/bookings/index.html.erb:10:in `each'
+    app/views/bookings/index.html.erb:10
+    app/controllers/bookings_controller.rb:8:in `index'
+
+Rendered rescues/_trace (142.8ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#index (for 127.0.0.1 at 2009-07-21 17:07:36) [GET]
+  [4;35;1mUser Load (2.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (1.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mBooking Load (2.0ms)[0m   [0mSELECT * FROM "bookings" WHERE ("bookings".user_id = 1) [0m
+Rendering template within layouts/bookings
+Rendering bookings/index
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "booking_notes" WHERE ("booking_notes".booking_id = 1) [0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSELECT count(*) AS count_all FROM "booking_notes" WHERE ("booking_notes".booking_id = 2) [0m
+Completed in 769ms (View: 74, DB: 9) | 200 OK [http://localhost/bookings]
+
+
+Processing BookingsController#show (for 127.0.0.1 at 2009-07-21 19:34:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBooking Load (4.9ms)[0m   [0;1mSELECT * FROM "bookings" WHERE ("bookings"."id" = 1) [0m
+  [4;35;1mBookingNote Load (1.5ms)[0m   [0mSELECT * FROM "booking_notes" WHERE ("booking_notes".booking_id = 1) [0m
+Rendering template within layouts/bookings
+Rendering bookings/show
+  [4;36;1mUser Load (1.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 159ms (View: 100, DB: 8) | 200 OK [http://localhost/bookings/1]
+
+
+Processing BookingsController#edit (for 127.0.0.1 at 2009-07-21 19:34:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBooking Load (2.6ms)[0m   [0mSELECT * FROM "bookings" WHERE ("bookings"."id" = 1) [0m
+Rendering template within layouts/bookings
+Rendering bookings/edit
+  [4;36;1mUser Load (2.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 423ms (View: 378, DB: 5) | 200 OK [http://localhost/bookings/1/edit]
+
+
+Processing BookingsController#index (for 127.0.0.1 at 2009-07-21 19:34:54) [GET]
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (2.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mBooking Load (3.3ms)[0m   [0mSELECT * FROM "bookings" WHERE ("bookings".user_id = 1) [0m
+Rendering template within layouts/bookings
+Rendering bookings/index
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "booking_notes" WHERE ("booking_notes".booking_id = 1) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "booking_notes" WHERE ("booking_notes".booking_id = 2) [0m
+Completed in 212ms (View: 69, DB: 9) | 200 OK [http://localhost/bookings]

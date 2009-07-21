@@ -15,6 +15,7 @@ class BookingsController < ApplicationController
   # GET /bookings/1.xml
   def show
     @booking = Booking.find(params[:id])
+    @notes = @booking.booking_notes.find(:all)
 
     respond_to do |format|
       format.html # show.html.erb

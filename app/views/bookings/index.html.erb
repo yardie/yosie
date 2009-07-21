@@ -2,14 +2,16 @@
 
 <table>
   <tr>
-    <th>Arrivaldate</th>
-    <th>Departuredate</th>
+    <th>Arrival Date</th>
+    <th>Departure Date</th>
+    <th>Notes</th>
   </tr>
 
 <% @bookings.each do |booking| %>
   <tr>
     <td><%=h booking.ArrivalDate %></td>
     <td><%=h booking.DepartureDate %></td>
+    <td><%= booking.booking_notes.count() -%></td>
     <td><%= link_to 'Show', booking %></td>
     <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
     <td><%= link_to 'Destroy', booking, :confirm => 'Are you sure?', :method => :delete %></td>

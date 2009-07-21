@@ -9,7 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090721150515) do
+ActiveRecord::Schema.define(:version => 20090721155330) do
+
+  create_table "booking_notes", :force => true do |t|
+    t.integer  "booking_id"
+    t.text     "note"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "bookings", :force => true do |t|
     t.date     "ArrivalDate"

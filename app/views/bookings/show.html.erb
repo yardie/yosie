@@ -1,11 +1,20 @@
 <p>
-  <b>Arrivaldate:</b>
+  <b>Arrival Date:</b>
   <%=h @booking.ArrivalDate %>
 </p>
 
 <p>
-  <b>Departuredate:</b>
+  <b>Departure Date:</b>
   <%=h @booking.DepartureDate %>
+</p>
+
+<p>
+  <b>Notes:</b>
+<% for note in @notes -%>
+  <p>
+    <%=h note.note %>
+  </p>
+<% end %>
 </p>
 
 
