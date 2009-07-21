@@ -1,0 +1,13 @@
+<p>
+  <b>Arrivaldate:</b>
+  <%=h @booking.ArrivalDate %>
+</p>
+
+<p>
+  <b>Departuredate:</b>
+  <%=h @booking.DepartureDate %>
+</p>
+
+
+<%= link_to 'Edit', edit_booking_path(@booking) %> |
+<%= link_to 'Back', bookings_path %>

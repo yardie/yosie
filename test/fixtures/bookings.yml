@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  ArrivalDate: 2009-07-21
+  DepartureDate: 2009-07-21
+
+two:
+  ArrivalDate: 2009-07-21
+  DepartureDate: 2009-07-21

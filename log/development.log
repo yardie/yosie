@@ -23,3 +23,33 @@ Migrating to CreateBookings (20090721123754)
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
   [4;35;1mSQL (0.3ms)[0m   [0mPRAGMA index_list("bookings")[0m
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2009-07-21 13:39:50) [GET]
+  [4;36;1mSQL (2.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 247ms (View: 24, DB: 4) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-21 13:40:25) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BookingsController#index (for 127.0.0.1 at 2009-07-21 13:41:23) [GET]
+  [4;36;1mBooking Load (1.0ms)[0m   [0;1mSELECT * FROM "bookings" [0m
+Rendering template within layouts/bookings
+Rendering bookings/index
+Completed in 120ms (View: 96, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing BookingsController#new (for 127.0.0.1 at 2009-07-21 13:41:30) [GET]
+Rendering template within layouts/bookings
+Rendering bookings/new
+Completed in 928ms (View: 882, DB: 0) | 200 OK [http://localhost/bookings/new]
