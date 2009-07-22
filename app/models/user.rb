@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   
   has_many :bookings
   has_many :booking_notes
+  has_many :booking_states
   
   include Authentication
   include Authentication::ByPassword

@@ -1,43 +1,19 @@
-class BookingsController < ApplicationController
-  # GET /bookings
-  # GET /bookings.xml
-  def index
-    @user = User.find(current_user)
-    @bookings = @user.bookings.find(:all)
+class BookingStatusesController < ApplicationController
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @bookings }
-    end
-  end
-
-  # GET /bookings/1
-  # GET /bookings/1.xml
-  def show
-    @booking = Booking.find(params[:id])
-    @notes = @booking.booking_notes.find(:all)
-    @statuses = @booking.booking_statuses.find(:all)
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @booking }
-    end
-  end
-
-  # GET /bookings/new
-  # GET /bookings/new.xml
+  # GET /booking_statuses/new
+  # GET /booking_statuses/new.xml
   def new
-    @booking = Booking.new
+    @booking_status = BookingStatus.new
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @booking }
+      format.xml  { render :xml => @booking_status }
     end
   end
 
-  # GET /bookings/1/edit
+  # GET /booking_statuses/1/edit
   def edit
-    @booking = Booking.find(params[:id])
+    @booking_status = BookingStatus.find(params[:id])
   end
 
   # POST /bookings

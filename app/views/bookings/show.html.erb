@@ -23,6 +23,14 @@ Last modified by <%=h @booking.latest_editor.firstname %> @ <%=h @booking.update
 <% end %>
 </p>
 
+<p>
+  <b>Status:</b>
+  <ul>
+  <% for status in @statuses %>
+    <li><%=h status.state.name %> - <%=h status.user.firstname %> - <%=h status.created_at %></li>
+  <% end %>
+  </ul>
+</p>
 
 <%= link_to 'Edit', edit_booking_path(@booking) %> |
 <%= link_to 'Back', bookings_path %>
