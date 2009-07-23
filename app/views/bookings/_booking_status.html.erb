@@ -1,0 +1,11 @@
+<div class="booking_status"> 
+  <% new_or_existing = booking_status.new_record? ? 'new' : 'existing' %> 
+  <% prefix = "booking[#{new_or_existing}_booking_status_attributes][]" %> 
+  <% fields_for prefix, booking_status do |booking_status_form| -%> 
+  <p> 
+    Status:
+    <%= booking_status_form.collection_select :state_id, State.find(:all), :id, :name, :include_blank => false %>
+    <%= link_to_function "remove", "$(this).up('.booking_status').remove()" %> 
+  </p> 
+  <% end -%> 
+</div> 

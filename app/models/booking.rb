@@ -7,4 +7,10 @@ class Booking < ActiveRecord::Base
   has_many :booking_statuses
   has_many :states, :through => :booking_statuses
 
+  def new_booking_status_attributes=(booking_status_attributes) 
+    booking_status_attributes.each do |attributes| 
+      booking_statuses.build(attributes) 
+    end 
+  end 
+
 end

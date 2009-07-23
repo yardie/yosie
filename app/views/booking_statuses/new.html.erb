@@ -1,0 +1,11 @@
+<% form_for(@booking_status) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :state_id %><br />
+    <%= f.collection_select :state_id, State.find(:all), :id, :name, :include_blank => false %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>

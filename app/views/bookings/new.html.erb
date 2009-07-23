@@ -1,6 +1,6 @@
 <h1>New booking</h1>
 
-<% form_for(@booking) do |f| %>
+<% form_for @booking do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -12,7 +12,10 @@
     <%= f.date_select :DepartureDate %>
   </p>
   <p>
-    <%= f.submit 'Create' %>
+    <%= add_status_link "Add a state" %>
+  </p>
+  <p>
+    <%= f.submit 'Make booking' %>
   </p>
 <% end %>
 
